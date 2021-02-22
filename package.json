@@ -1,0 +1,22 @@
+{
+  "name": "hogwarts-revisited.net",
+  "version": "1.0.0",
+  "description": "An online Harry Potter fansite and social network",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thetrend/hogwarts-revisited.net.git"
+  },
+  "author": "Grace de la Mora <grace.g.delamora@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thetrend/hogwarts-revisited.net/issues"
+  },
+  "homepage": "https://github.com/thetrend/hogwarts-revisited.net#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
