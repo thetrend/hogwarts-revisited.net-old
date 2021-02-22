@@ -172,12 +172,12 @@ article#frontpage {
 
 article#frontpage > img {
   width: 30%;
-  margin: 1.5% auto;
+  margin: 1% auto;
 }
 
 section#master-container > main > footer {
   margin-top: 4vh;
-  margin-bottom: -4vh;
+  margin-bottom: -2vh;
   font-size: small;
   border-top: 1px solid var(--foreground);
   padding-top: 2vh;
