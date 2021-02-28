@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 854 1000">
+<style type="text/css">
+	#gryffindor-red {fill:#A20000;}
+	#ravenclaw-blue {fill:#0049b6;}
+	#hufflepuff-yellow {fill:#ECEE18;}
+	#slytherin-green {fill:#008943;}
+	#hr-white {fill:#F4F4F4;}
+  .hr-black {fill: #060606; }
+	#slytherin-silver {fill-rule:evenodd;clip-rule:evenodd;fill:#bebebe;}
+	#hufflepuff-black {fill-rule:evenodd;clip-rule:evenodd;fill:#181818;}
+	#gryffindor-gold {fill-rule:evenodd;clip-rule:evenodd;fill:#FFDD00;}
+	#ravenclaw-bronze {fill-rule:evenodd;clip-rule:evenodd;fill:#DF8C3A;}
+</style>
+<rect id="gryffindor-red" width="427" height="500"/>
+<rect id="ravenclaw-blue" y="500" width="427" height="500"/>
+<rect id="hufflepuff-yellow" x="427" width="427" height="500"/>
+<rect id="slytherin-green" x="427" y="500"  width="427" height="500"/>
+<rect id="hr-white" x="177" y="250" width="501" height="500"/>
+<path id="slytherin-silver" d="M500,750l177-250l177,250l-177,250L500,750z"/>
+<path id="hufflepuff-black" d="M677,0l177,249.5L677,499L500,249.5L677,0z"/>
+<path id="gryffindor-gold" d="M177,0l177,249.5L177,499L0,249.5L177,0z"/>
+<path id="ravenclaw-bronze" d="M0,750l177-250l177,250l-177,250L0,750z"/>
+<g id="letter-group">
+	<path id="H" class="hr-black" d="M209.4,507.5V485h33.1V291h-33.1v-22.5h101V291h-33.1v81.5h127.4V291h-33.5v-22.5h101V291h-33.1v194h33.1v22.5h-101
+		V485h33.5v-88.3H277.4V485h33.1v22.5H209.4z"/>
+	<path id="R" class="hr-black" d="M425.9,724.1v-22.5h33.1v-194h-33.1V485h125.7c16.7,0,31.1,2.3,43.3,7c12.2,4.7,21.5,11.6,28,20.8
+		c6.5,9.2,9.8,20.7,9.8,34.6c0,11-2.1,20.9-6.2,29.7c-4.1,8.8-10.7,16.1-19.7,21.9c-9.1,5.8-20.9,9.8-35.7,12.1l54.8,90.4h35.2v22.5
+		h-59L538,614.5h-29.3v-23.4h37.4c13.9,0,24.6-2.2,32.1-6.6c7.5-4.4,12.7-9.9,15.7-16.6c3-6.6,4.5-13.4,4.5-20.2
+		c0-7.4-1.6-14.1-4.9-20.2c-3.3-6.1-8.3-11-15.1-14.6c-6.8-3.7-15.6-5.5-26.3-5.5h-58.2v194H527v22.5H425.9z"/>
+</g>
+</svg>
