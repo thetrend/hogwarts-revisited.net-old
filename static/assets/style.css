@@ -40,14 +40,15 @@
 
   --background: var(--hr-white-hex);
   --foreground: var(--hr-black-hex);
+
+  --input-white: #efefef;
+  --input-gray: #767676;
 }
 
 /* Set universal font */
 * { font-family: 'Roboto', sans-serif; font-weight: 300; }
 
-.header { font-family: 'Rokkitt', serif; }
-.bold.header { font-weight: 600; }
-
+/* Typography */
 h1,h2,h3,h4,h5,h6 { line-height: 95%; margin: 0; padding: 0; }
 
 h1 { font-size: 250%; }
@@ -57,8 +58,31 @@ h4 { font-size: 175%; }
 h5 { font-size: 150%; }
 h6 { font-size: 125%; }
 
+.header { font-family: 'Rokkitt', serif; }
+.bold.header { font-weight: 600; }
+
 .large.font {
   font-size: 125%;
+}
+
+.centered.text {
+  text-align: center;
+}
+
+.small.text {
+  font-size: 50%;
+}
+
+p.full.paragraph {
+  width: 100%;
+}
+
+p.small.paragraph {
+  margin: auto 30%;
+}
+
+p.medium.paragraph {
+  margin: auto 15%;
 }
 
 /* Body styles */
@@ -119,13 +143,20 @@ img {
   height: auto;
 }
 
+hr {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--input-gray);
+}
+
 /* Form elements */
 button[type='submit'],
 button[type='reset'],
 input[type='submit'],
 input[type='reset'] {
-  background: #efefef;
-  border: 1px solid #767676;
+  background: var(--input-white);
+  border: 1px solid var(--input-gray);
 }
 
 /* Master container and children */
@@ -150,26 +181,6 @@ input[type='reset'] {
 
 section#frontpage > p > strong {
   font-weight: 800;
-}
-
-.text.centered {
-  text-align: center;
-}
-
-.text.small {
-  font-size: 50%;
-}
-
-p.full.paragraph {
-  width: 100%;
-}
-
-p.small.paragraph {
-  margin: auto 30%;
-}
-
-p.medium.paragraph {
-  margin: auto 15%;
 }
 
 .centered.item {
@@ -268,7 +279,7 @@ and (orientation: landscape) {
     width: 100%;
     flex-grow: 2;
   }
-  body> footer {
+  body > footer {
     width: 80%;
     padding: 0 10%;
   }
