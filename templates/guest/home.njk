@@ -1,0 +1,21 @@
+{% extends "./template.njk" %}
+
+{% block content %}
+      <section id="screenshot-gallery">
+        <div class="gallery-item">
+          <i class="fas fa-caret-left fa-5x"></i>
+          <img class="desktop screenshot"  src="./assets/sample-desktop.svg" id="Desktop Screenshot" />
+          <i class="fas fa-caret-right fa-5x"></i>
+        </div>
+      </section>
+
+      <section id="frontpage">
+        <p>Welcome to <strong class="large font header">Hogwarts Revisited</strong>, the social network reuniting fans all over the
+          world with the beloved magic of the Harry Potter universe.</p>
+        <p>Come join your friends, make new ones, and discuss your favorite book or movie moments or explore your own
+          characters as they live in the modern-day setting of Hogwarts and the magical world as a First Year,
+          Prefect, Professor, Auror, shopkeeper, and so much more.</p>
+        <h2 class="header centered text"><a href="/signup">Sign Up</a> or <a href="/login">Log In</a> today!
+        </h2>
+      </section>
+{% endblock %}
