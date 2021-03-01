@@ -60,12 +60,20 @@ body > footer {
   flex-shrink: 2;
   background: var(--foreground);
   color: var(--background);
-  margin: auto;
 }
 
 body > footer > p {
   text-align: center;
-  line-height: 90%;
+  font-size: small;
+  margin: 0;
+}
+
+body > footer > p:first-of-type {
+  margin-top: 1vh;
+}
+
+body > footer > p:last-of-type{
+  margin-bottom: 1vh;
 }
 
 /* Set default link styles */
@@ -203,8 +211,5 @@ and (min-width: 1441px) {
   }
   section#frontpage > h2 {
     margin-bottom: 0;
-  }
-  body > footer > p {
-    font-size: small;
   }
 }
