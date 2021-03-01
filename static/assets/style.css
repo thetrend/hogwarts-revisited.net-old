@@ -1,0 +1,306 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Import Normalize CSS */
+@import url('./normalize.css');
+
+/* TO DO:
+ * - Clean up rgb values to match modified hex values
+ * - Media queries
+ * - Comments
+ */
+
+/* Set Root Variables */
+:root {
+  --hr-white-hex: #f4f4f4;
+  --hr-white-rgb: '';
+
+  --hr-black-hex: #060606;
+  --hr-black: '';
+
+  --gryffindor-red-hex: #a20000;
+  --gryffindor-red-rgb: '';
+  --gryffindor-gold-hex: #ffdd00;
+  --gryffindor-gold-rgb: '';
+
+  --hufflepuff-yellow-hex: #ECEE18;
+  --hufflepuff-yellow-rgb: '';
+  --hufflepuff-black-hex: #181818;
+  --hufflepuff-black-rgb: '';
+
+  --ravenclaw-blue-hex: #0049b6;
+  --ravenclaw-blue-rgb: '';
+  --ravenclaw-bronze-hex: #DF8C3A;
+  --ravenclaw-bronze-rgb: '';
+
+  --slytherin-green-hex: #008943;
+  --slytherin-green-rgb: '';
+  --slytherin-silver-hex: #bebebe;
+  --slytherin-silver-hex: '';
+
+  --background: var(--hr-white-hex);
+  --foreground: var(--hr-black-hex);
+}
+
+/* Set universal font */
+* { font-family: 'Roboto', sans-serif; font-weight: 300; }
+
+.header { font-family: 'Rokkitt', serif; }
+.bold.header { font-weight: 600; }
+
+h1,h2,h3,h4,h5,h6 { line-height: 95%; margin: 0; padding: 0; }
+
+h1 { font-size: 250%; }
+h2 { font-size: 225%; }
+h3 { font-size: 200%; }
+h4 { font-size: 175%; }
+h5 { font-size: 150%; }
+h6 { font-size: 125%; }
+
+.large.font {
+  font-size: 125%;
+}
+
+/* Body styles */
+body {
+  margin: 0 auto;
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 1.25rem;
+  font-weight: 300;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+body > footer {
+  flex-shrink: 2;
+  background: var(--foreground);
+  color: var(--background);
+}
+
+body > footer > p {
+  text-align: center;
+  font-size: small;
+  margin: 0;
+}
+
+body > footer > p:first-of-type {
+  margin-top: 1vh;
+}
+
+body > footer > p:last-of-type{
+  margin-bottom: 1vh;
+}
+
+/* Set default link styles */
+a {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+/* Most links will have blue text */
+a.regular.link {
+  color: #0077ff;
+  font-weight: normal;
+}
+
+/* Make images fit the full width of their parent */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Form elements */
+button[type='submit'],
+button[type='reset'],
+input[type='submit'],
+input[type='reset'] {
+  background: #efefef;
+  border: 1px solid #767676;
+}
+
+/* Master container and children */
+#master-container {
+  display: flex;
+  width: 100%;
+  flex-grow: 2;
+  justify-content: flex-start;
+}
+
+#master-container > main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+#master-container > aside {
+  background: var(--foreground);
+  color: var(--background);
+  line-height: 0;
+}
+
+section#frontpage > p > strong {
+  font-weight: 800;
+}
+
+.text.centered {
+  text-align: center;
+}
+
+.text.small {
+  font-size: 50%;
+}
+
+p.full.paragraph {
+  width: 100%;
+}
+
+p.small.paragraph {
+  margin: auto 30%;
+}
+
+p.medium.paragraph {
+  margin: auto 15%;
+}
+
+.centered.item {
+  margin: auto;
+}
+
+div.gallery-item {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2vh 0;
+}
+
+section#screenshot-gallery {
+  display: none;
+}
+
+.screenshot {
+  margin: auto 2.5%;
+}
+
+.screenshot.desktop {
+  width: 75%;
+}
+
+.screenshot.device {
+  width: 40%;
+}
+
+form.guest.form {
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+form.guest.form > div.form.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 3%;
+}
+
+div.form.row > input, 
+div.form.row > textarea {
+  width: 60%;
+}
+
+/* Media Queries */
+@media only screen
+and (orientation: portrait) {
+  #master-container {
+    flex-flow: column nowrap;
+  }
+  #master-container > aside > img {
+    width: 100%;
+  }
+  #master-container > main {
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 3vh;
+  }
+  #section-gallery {
+    display: none;
+  }
+  .bold.header {
+    text-align: center;
+  }
+  #frontpage > h2 {
+    margin-bottom: 0.75rem;
+  }
+  body > footer {
+    width: 98%;
+    padding: 0 1%;
+  }
+  form.guest.form {
+    width: 96%;
+  }
+}
+
+@media only screen
+and (orientation: portrait)
+and (min-width: 768px) {
+  #master-container > aside > img {
+    height: 70vh;
+  }
+}
+
+@media only screen
+and (orientation: landscape) {
+  #master-container > aside {
+    width: 40%;
+  }
+  #master-container > main {
+    margin: 2%;
+    width: 100%;
+    flex-grow: 2;
+  }
+  body> footer {
+    width: 80%;
+    padding: 0 10%;
+  }
+  form.guest.form {
+    width: 60%;
+  }
+  div.form.row > label {
+    width: 25%;
+  }
+  div.form.row > label ~ * {
+    width: 75%;
+  }
+}
+
+@media only screen
+and (orientation: landscape)
+and (min-width: 768px) {
+  section#screenshot-gallery {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    flex-grow: 2;
+  }
+  #master-container > aside {
+    width: 60%;
+  }
+}
+
+@media only screen
+and (orientation: landscape)
+and (min-width: 1441px) {
+  * {
+    font-size: 1.25rem;
+  }
+}

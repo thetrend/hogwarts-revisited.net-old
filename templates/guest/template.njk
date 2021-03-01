@@ -1,0 +1,31 @@
+{# TODO:
+    - Do all img tags have 
+#}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hogwarts | revisited.</title>
+  <script src="https://kit.fontawesome.com/c2a3fdc39d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+  <section id="master-container">
+    <aside class="guest">
+      <a href="/"><img src="./assets/logo.svg" /></a>
+    </aside>
+    <main> 
+    {% block content %}{% endblock %}
+    </main>
+  </section>
+  
+  <footer>
+    <p>Harry Potter, Hogwarts, and all other related content are property of J.K. Rowling.</p>
+    <p>Hogwarts-Revisited.net is an unofficial and independent  Harry Potter fansite created and maintained by Grace de la Mora.</p>
+  </footer>
+</body>
+</html>
