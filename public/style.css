@@ -3,6 +3,12 @@
 /* Import Normalize CSS */
 @import url('./normalize.css');
 
+/* TO DO:
+ * - Clean up rgb values to match modified hex values
+ * - Media queries
+ * - Comments
+ */
+
 /* Set Root Variables */
 :root {
   --hr-white-hex: #f4f4f4;
@@ -40,15 +46,29 @@
 
 /* Body styles */
 body {
-  margin: auto;
+  margin: 0 auto;
   background: var(--background);
   color: var(--foreground);
   font-size: 1rem;
   display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
   min-height: 100vh;
-  align-items: stretch;
 }
 
+body > footer {
+  flex-shrink: 2;
+  background: var(--foreground);
+  color: var(--background);
+  margin: auto;
+}
+
+body > footer > p {
+  text-align: center;
+  line-height: 20%;
+}
+
+/* Set default link styles */
 a {
   color: inherit;
   font-weight: 800;
@@ -59,77 +79,33 @@ a:hover, a:active {
   text-decoration: underline;
 }
 
-/* Input, button, textarea */
-input, button, textarea {
-  background: var(--background);
-  color: var(--foreground);
-  margin: 8px;
-  border: none;
-  padding: 4px;
-}
-
-input:focus,
-button:hover,
-button:active,
-textarea:focus {
-  background-color: var(--hr-white-hex);
-}
-
-/* Set Placeholder color */
-::placeholder {
-  color: var(--hr-white-hex);
-  opacity: 0.8;
-}
-
 /* Make images fit the full width of their parent */
 img {
   width: 100%;
   height: auto;
 }
 
-@media only screen {
-  #master-container {
-    display: flex;
-  }
-
-  #master-container > aside {
-    background: var(--foreground);
-    color: var(--background);
-    height: 100%;
-    width: 50%;
-  }
-  #master-container > aside  {
-    order: 2;
-    display: flex;
-    align-items: center;
-    flex-grow: 2;
-  }
-  #master-container > aside > img {
-    height: 85vh;
-    width: auto;
-  }
-  #master-container > main {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
+/* Master container and children */
+#master-container {
+  display: flex;
+  width: 100%;
+  justify-self: flex-start;
+  flex-grow: 2;
 }
 
-/* these styles only applies to the front page */
-article#frontpage {
-  margin: auto;
+#master-container > main {
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  width: 65%;
-  height: auto;
-  padding: 2.5vh 5vw;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+#master-container > aside {
   background: var(--foreground);
   color: var(--background);
-  font-weight: bold;
+  line-height: 0;
 }
 
-article#frontpage > header > p > strong {
+section#frontpage > p > strong {
   font-weight: 800;
 }
 
@@ -137,25 +113,98 @@ article#frontpage > header > p > strong {
   text-align: center;
 }
 
-main > div {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-main > div > img {
-  width: 35px;
-  margin: 5px;
-  display: inline;
-}
-
-main > section {
+div.gallery-item {
   display: flex;
   flex-flow: row nowrap;
-  width: 80%;
-  align-items: flex-end;
-  margin-top: 20vh;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2vh 0;
 }
 
-figure {
-  text-align: center;
+section#screenshot-gallery {
+  display: none;
+}
+
+.screenshot {
+  margin: auto 2.5%;
+}
+
+.screenshot.desktop {
+  width: 75%;
+}
+
+.screenshot.device {
+  width: 40%;
+}
+
+/* Media Queries */
+@media only screen
+and (orientation: portrait) {
+  #master-container {
+    flex-flow: column nowrap;
+  }
+  #master-container > aside > img {
+    width: 100%;
+  }
+  #master-container > main {
+    width: 90vw;
+    margin: auto;
+  }
+  #section-gallery {
+    display: none;
+  }
+  body> footer {
+    width: 98%;
+    padding: 0 1%;
+  }
+}
+
+@media only screen
+and (orientation: portrait)
+and (min-width: 768px) {
+  #master-container > aside > img {
+    height: 70vh;
+  }
+}
+
+@media only screen
+and (orientation: landscape) {
+  #master-container > aside {
+    width: 40%;
+  }
+  #master-container > main {
+    margin: 2%;
+  }
+  body> footer {
+    width: 80%;
+    padding: 0 10%;
+  }
+}
+
+@media only screen
+and (orientation: landscape)
+and (min-width: 768px) {
+  section#screenshot-gallery {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    flex-grow: 2;
+  }
+  #master-container > aside {
+    width: 60%;
+  }
+}
+
+@media only screen
+and (orientation: landscape)
+and (min-width: 1441px) {
+  * {
+    font-size: 1.25rem;
+  }
+  section#frontpage > h2 {
+    margin-bottom: 0;
+  }
+  body > footer > p {
+    font-size: small;
+  }
 }
