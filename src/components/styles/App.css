@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  @apply flex;
+  @apply items-center;
+  @apply md:justify-center;
+  @apply min-h-screen;
+  @apply bg-gray-300;
+  @apply md:m-auto;
+  @apply flex-col;
+  @apply md:flex-row;
+}
+
+/* Typography helpers */
+.text-indent {
+  text-indent: 0.75rem;
+}
+
+.display-font {
+  font-family: 'Rokkitt', monospace;
+}
