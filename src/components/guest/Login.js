@@ -22,7 +22,6 @@ const Login = () => {
         <button type="submit" className="guest-button">{pageName}</button>
         <p className="text-center display-font text-xl">or <Link to="/signup" className="font-bold">Sign Up</Link> &middot; <Link to="/" className="font-bold">Home</Link></p>
       </form>
-
     </Guest>
   );
 }
