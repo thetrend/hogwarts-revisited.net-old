@@ -1,9 +1,7 @@
 # Hogwarts-Revisited.net
-------------------------
 An online Harry Potter fan community. [hogwarts-revisited.net](https://hogwarts-revisited.net/)
 
 ## Tech Stack
--------------
 - React
 - Redux
 - FaunaDB
@@ -11,7 +9,6 @@ An online Harry Potter fan community. [hogwarts-revisited.net](https://hogwarts-
 - Tailwind CSS
 
 ## Resources
-------------
 ### Netlify + FaunaDB
 - [Beth Schofield's Netlify + FaunaDB + React tutorial](https://medium.com/@bethmschofield/adding-faunadb-to-a-netlify-deployed-react-app-47753d6de1c9)
 - [The Leaky Cauldron's Authenticated CRUD using Netlify + FaunaDB](https://theleakycauldronblog.com/blog/authenticated-serverless-crud-netlify-functions-faunadb-part-1)
