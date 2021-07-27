@@ -1,6 +1,6 @@
 import faunadb from 'faunadb';
 
-import { USER_COLLECTION } from '../../src/collections';
+const USER_COLLECTION = 'users';
 
 const createUsersCollection = async function () {
   if (!process.env.FAUNADB_SERVER_SECRET) {
@@ -45,6 +45,7 @@ const createUsersCollection = async function () {
         active: true
       })
     );
+
     console.log('users_by_username index created.');
     return;
   } catch (error) {
