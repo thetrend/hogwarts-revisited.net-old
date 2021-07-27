@@ -41,7 +41,7 @@
   @apply focus:border-blue-500;
 }
 
-.guest-button {;
+.guest-button {
   @apply mb-5;
   @apply text-3xl;
   @apply display-font;
@@ -56,4 +56,16 @@
   @apply border-b-4;
   @apply border-blue-700;
   @apply hover:border-blue-500 rounded;
+}
+
+/* Alert Styles */
+.alert-error {
+  @apply mb-5;
+  @apply py-1;
+  @apply px-4;
+  @apply mx-auto;
+  @apply bg-red-200;
+  @apply border-red-600;
+  @apply border;
+  @apply rounded;
 }

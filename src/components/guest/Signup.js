@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Guest from './Guest';
 
-const Signup = () => {
+const Signup = ({ setAlert, signup }) => {
   let pageName = 'Sign Up';
 
   const [formData, setFormData] = useState({
@@ -20,17 +20,17 @@ const Signup = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    if (password2 !== password) {
-      console.log('Passwords do not match.');
-    } else {
-      console.log(formData);
-    }
+    // if (password2 !== password) {
+    // } else if (password.length < 6) {
+    // } else {
+    //   console.log('success');
+    //   return;
   }
 
   return (
-    /** TODO: isAuthenticated ? Redirect to Home : Display Guest */
     <Guest>
       <h1 className="text-7xl display-font font-bold text-center mb-5">{pageName}</h1>
+      {/* <Alert /> */}
       <form className="text-center flex flex-col" onSubmit={onSubmit}>
         <div className="flex flex-row mb-5">
         <label htmlFor="email" className="text-left w-2/5">Email:</label>
