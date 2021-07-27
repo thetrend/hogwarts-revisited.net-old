@@ -22,5 +22,5 @@ An online Harry Potter fan community. [hogwarts-revisited.net](https://hogwarts-
 
 ### React + Redux + JWT
 - [Jason Watmore's React/Redux JWT Authentication Tutorial](https://jasonwatmore.com/post/2017/12/07/react-redux-jwt-authentication-tutorial-example)
-- [BezKoder.com: React/Redux JWT with Axios Tutorial](https://www.bezkoder.com/react-redux-jwt-auth/#Overview_of_React_Redux_JWT_Authentication_example)
-- **Paid Resource:** [UDEMY: Brad Traversy's MERN Stack Front to Back](https://www.udemy.com/course/mern-stack-front-to-back/)
+- [BezKoder.com: React/Redux JWT with Axios Tutorial](https://www.bezkoder.com/react-hooks-redux-login-registration-example/e)
+- **Paid Resource:** [(UDEMY) Brad Traversy's MERN Stack Front to Back](https://www.udemy.com/course/mern-stack-front-to-back/)
