@@ -22,7 +22,7 @@ const Login = () => {
   return (
     <Guest>
       <h1 className="text-7xl display-font font-bold text-center mb-5">{pageName}</h1>
-      <form className="text-center flex flex-col">
+      <form className="text-center flex flex-col" onSubmit={onSubmit}>
         <div className="flex flex-row mb-5">
         <label htmlFor="email" className="text-left w-2/5">Email:</label>
         <input id="email" type="email" placeholder="your@email.com" className="guest-input"  value={email} onChange={e => onChange(e)} required />
