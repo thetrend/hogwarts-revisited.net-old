@@ -1,21 +1,16 @@
 const process = require('process');
-
 const { query, Client } = require('faunadb');
+const errorMessage = require('./errorMessage').handler;
 
 const client = new Client({
-  secret: process.env.FAUNADB_SERVER_SECRET,
+  secret: process.env.FAUNADB_GUEST_SECRET
 });
 
 const handler = async (event) => {
   const { email, password } = JSON.parse(event.body);
 
   if (!email || !password) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({
-        message: 'Login Failure'
-      })
-    }
+    return errorMessage('Login Attempt Failure');
   }
 
   try {
@@ -37,10 +32,7 @@ const handler = async (event) => {
     }
   } catch (error) {
     console.log('error', error);
-    return {
-      statusCode: 400,
-      body: JSON.stringify(error),
-    }
+    return errorMessage('Critical server error', 500);
   }
 }
 

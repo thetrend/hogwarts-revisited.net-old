@@ -44,14 +44,12 @@ const login = (email, password) => {
   };
 };
 
-/* 
 const logout = () => {
   userService.logout();
   return {
-    type: userType.LOGOUT;
+    type: userType.LOGOUT
   }
 };
-*/
 
 const getAll = () => {
   const request = () => ({

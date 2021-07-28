@@ -11,8 +11,8 @@ const createUsersCollection = async function () {
   })
 
   try {
-    await client.query(query.CreateCollection({ name: USER_COLLECTION }))
-    console.log('Created users collection.')
+    await client.query(query.CreateCollection({ name: USER_COLLECTION }));
+    console.log('Created users collection.');
 
     await client.query(
       query.CreateIndex({
